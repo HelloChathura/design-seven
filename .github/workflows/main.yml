@@ -1,0 +1,19 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  # Only trigger on push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Store your Vercel token in GitHub Secrets
+        run: npx vercel --prod
