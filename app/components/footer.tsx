@@ -1,5 +1,4 @@
 'use client';
-import NavComponent from './ui/nav';
 
 import Link from 'next/link'
 import { Facebook, Twitter, Youtube, Linkedin, Instagram } from 'lucide-react'
