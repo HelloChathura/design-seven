@@ -74,7 +74,7 @@ export default function ContactUs() {
                 type="text"
                 placeholder="Your Name"
                 value={name}
-                //onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
                 //required
               />
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
@@ -83,8 +83,8 @@ export default function ContactUs() {
               <Input
                 type="email"
                 placeholder="Your Email"
-                //value={email}
-                //onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                // required
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -93,15 +93,15 @@ export default function ContactUs() {
               <Input
                 type="tel"
                 placeholder="Your Mobile Number (optional)"
-                //value={mobile}
-               // onChange={(e) => setMobile(e.target.value)}
+                value={mobile}
+                onChange={(e) => setMobile(e.target.value)}
               />
             </div>
             <div>
               <Textarea
                 placeholder="Your Message"
-                //value={message}
-               // onChange={(e) => setMessage(e.target.value)}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                // required
                 className="min-h-[150px]"
               />

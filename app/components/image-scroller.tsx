@@ -17,11 +17,12 @@ export default function LargeImageScroller() {
   }, [])
 
   const images = [
-    "/home_banner_1.svg?height=800&width=1200",
-    "/placeholder.svg?height=800&width=1200",
-    "/placeholder.svg?height=800&width=1200",
-    "/placeholder.svg?height=800&width=1200",
-    "/placeholder.svg?height=800&width=1200",
+    "/interior.jpg",
+    // "/home_banner_1.svg?height=800&width=1200",
+    // "/placeholder.svg?height=800&width=1200",
+    // "/placeholder.svg?height=800&width=1200",
+    // "/placeholder.svg?height=800&width=1200",
+    // "/placeholder.svg?height=800&width=1200",
   ]
 
   const handleDragEnd = () => {

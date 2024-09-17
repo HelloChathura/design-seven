@@ -13,8 +13,8 @@ const Input: React.FC<InputProps> = ({ type = "text", placeholder, value, onChan
     <input
       type={type}
       placeholder={placeholder}
-      //value={value}
-      //onChange={onChange}
+      value={value}
+      onChange={onChange}
       className={`input ${className}`}
     />
   );

@@ -13,15 +13,15 @@ export default function NavBar() {
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-12">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               {/* Replace the text with the logo */}
               <Image
                 src="/logo.png" // Change to the path of your logo file
                 alt="Design Seven Logo"
-                width={40} // Set the appropriate width for your logo
-                height={40} // Set the appropriate height for your logo
+                width={400} // Set the appropriate width for your logo
+                height={200} // Set the appropriate height for your logo
                 className="h-8 w-auto" // Tailwind CSS classes for responsiveness
               />
             </Link>
