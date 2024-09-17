@@ -103,7 +103,7 @@ const FlippingCard = ({ front, back }: FlippingCardProps) => {
               imageSrc: "./corporate_commercials_front.jpg", // SVG file
               imageText: "Web Dev Front",
               title: "CORPORATE / COMMERCIALS",
-              description: "Building modern websites",
+              description: "",
               isSvg: true, // SVG flag
             },
             back: {
@@ -121,7 +121,7 @@ const FlippingCard = ({ front, back }: FlippingCardProps) => {
               imageSrc: "./restaurant_bar_front.jpg", // SVG file
               imageText: "RESTAURANTS & BARS",
               title: "RESTAURANTS & BARS",
-             description: "Building modern websites",
+             description: "",
               isSvg: true, // SVG flag
             },
             back: {
@@ -139,7 +139,7 @@ const FlippingCard = ({ front, back }: FlippingCardProps) => {
               imageSrc: "./apartment_front.jpg", // SVG file
               imageText: "Web Dev Front",
               title: "RESIDENTIAL",
-              description: "Building modern websites",
+              description: "",
               isSvg: true, // SVG flag
             },
             back: {
@@ -157,7 +157,7 @@ const FlippingCard = ({ front, back }: FlippingCardProps) => {
               imageSrc: "./mixed_front.jpg", // SVG file
               imageText: "Web Dev Front",
               title: "MIXED - USE",
-              description: "Building modern websites",
+              description: "",
               isSvg: true, // SVG flag
             },
             back: {
@@ -175,7 +175,7 @@ const FlippingCard = ({ front, back }: FlippingCardProps) => {
               imageSrc: "./industrial_front.jpg", // SVG file
               imageText: "Web Dev Front",
               title: "INDUSTRIAL",
-              description: "Building modern websites",
+              description: "",
               isSvg: true, // SVG flag
             },
             back: {
@@ -193,7 +193,7 @@ const FlippingCard = ({ front, back }: FlippingCardProps) => {
               imageSrc: "./healthcare_front.jpg", // SVG file
               imageText: "Web Dev Front",
               title: "HEALTHCARE",
-              description: "Building modern websites",
+              description: "",
               isSvg: true, // SVG flag
             },
             back: {
