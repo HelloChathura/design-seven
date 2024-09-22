@@ -12,14 +12,14 @@ interface Advantage {
 }
 
 const advantages: Advantage[] = [
-  { title: "COST & TIME", description: "DESIGN SEVEN offers cost-effective services to clients along with the best value. ", hoverText: "Clients effectively save 40-45% on cost as compared to in-house production.", icon: Clock },
+  { title: "COST & TIME", description: "DESIGN SEVEN offers cost-effective services to clients along with the best value.", hoverText: "Clients effectively save 40-45% on cost as compared to in-house production.", icon: Clock },
   { title: "EXPERIENCE", description: "Leadership and team have completed many small to large scale projects in many states", hoverText: "Leadership and team have completed many small to large scale projects in many states", icon: Star },
   { title: "FLEXIBILITY", description: "Experienced team has the flexibility of ramping team up/down.", hoverText: "Experienced team has the flexibility of ramping team up/down based on project requirements.", icon: Shield },
-  { title: "BIM EXPERTISE", description: "Design Seven is a team is well experienced in BIM. ", hoverText: "Design Seven is a team is well experienced in BIM. The team has completed many projects across the States in Revit.", icon: Rocket },
-  { title: "STANDARDS", description: "DESIGN SEVEN team is able to produce sets in accordance with AIA and any required.. ", hoverText: "DESIGN SEVEN team is able to produce sets in accordance with AIA and any required client standards. ", icon: Compass },
-  { title: "INFARSTRUCTURE", description: "The Organization is equipped with Data Integrity & Security, Global Connectivity..", hoverText: "The Organization is equipped with Data Integrity & Security, Global Connectivity, latest Hardware/Software, Cloud & Remote connectivity.", icon: Heart },
+  { title: "BIM EXPERTISE", description: "Design Seven is a team is well experienced in BIM.", hoverText: "Design Seven is a team is well experienced in BIM. The team has completed many projects across the States in Revit.", icon: Rocket },
+  { title: "STANDARDS", description: "DESIGN SEVEN team is able to produce sets in accordance with AIA and any required..", hoverText: "DESIGN SEVEN team is able to produce sets in accordance with AIA and any required client standards.", icon: Compass },
+  { title: "INFRASTRUCTURE", description: "The Organization is equipped with Data Integrity & Security, Global Connectivity..", hoverText: "The Organization is equipped with Data Integrity & Security, Global Connectivity, latest Hardware/Software, Cloud & Remote connectivity.", icon: Heart },
   { title: "PROCESS EXCELLENCE", description: "DESIGN SEVEN delivers unmatched business value through process..", hoverText: "DESIGN SEVEN delivers unmatched business value through process excellence & quality frameworks.", icon: Sun },
-  { title: "REPEAT CLIENTEL", description: "DESIGN SEVEN focuses on surpassing client expectations and..", hoverText: "building long-term relationships. This is reflected in the fact that DESIGN SEVEN has a near-100% client retention rate with clients associated.", icon: Moon },
+  { title: "REPEAT CLIENTELE", description: "DESIGN SEVEN focuses on surpassing client expectations and..", hoverText: "building long-term relationships. This is reflected in the fact that DESIGN SEVEN has a near-100% client retention rate with clients associated.", icon: Moon },
 ];
 
 interface AdvantageCardProps {
@@ -39,7 +39,9 @@ const AdvantageCard: React.FC<AdvantageCardProps> = ({ advantage }) => {
       <Card className="h-full w-full">
         <CardContent className="p-10 h-full flex flex-col items-center justify-center text-center">
           <motion.div
-            className="relative flex flex-col items-center justify-center"
+            className={`relative flex flex-col items-center justify-center transition-opacity duration-300 ${
+              isHovered ? "opacity-0" : "opacity-100"
+            }`}
             initial={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
