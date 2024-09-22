@@ -22,7 +22,6 @@ interface CardContentProps {
 export const CardContent = ({ children, className = '' }: CardContentProps) => {
   return (
     <div className={`${className}`}>
-    {/* <div className={`p-4 ${className}`}> */}
       {children}
     </div>
   );
