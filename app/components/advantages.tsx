@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "./ui/card";
-import { Zap, Star, Shield, Rocket, Compass, Heart, Sun, Moon, Clock } from "lucide-react";
+import { Star, Shield, Rocket, Compass, Heart, Sun, Moon, Clock } from "lucide-react";
 
 interface Advantage {
   title: string;
