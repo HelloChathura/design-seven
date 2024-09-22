@@ -13,20 +13,20 @@ export default function NavBar() {
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="flex justify-between h-16"> {/* Adjusted height */}
+        <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <Image
                 src="/logo.png"
                 alt="Design Seven Logo"
-                width={500} // Increased width
-                height={250} // Increased height
-                className="h-12 w-auto" // Adjusted height for responsiveness
+                width={500}
+                height={250}
+                className="h-12 w-auto"
               />
             </Link>
           </div>
           <div className="hidden sm:ml-10 sm:flex sm:items-center">
-            <div className="flex space-x-6"> {/* Increased spacing between items */}
+            <div className="flex space-x-6">
               <NavLink href="/">Home</NavLink>
               <NavLink href="/about">About Us</NavLink>
               <NavLink href="/ourservices">Our Services</NavLink>
@@ -34,8 +34,10 @@ export default function NavBar() {
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-base font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-              Get Started
+            {/* New MENU button */}
+            <button className="flex items-center bg-white text-black border border-gray-300 px-4 py-2 rounded-md shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+              <Menu className="h-5 w-5 mr-2" aria-hidden="true" /> {/* Icon */}
+              <span className="font-medium text-base">Menu</span> {/* Text */}
             </button>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
@@ -56,7 +58,7 @@ export default function NavBar() {
 
       {isMenuOpen && (
         <div className="sm:hidden">
-          <div className="pt-3 pb-5 space-y-2"> {/* Increased padding */}
+          <div className="pt-3 pb-5 space-y-2">
             <MobileNavLink href="/products">Products</MobileNavLink>
             <MobileNavLink href="/pricing">Pricing</MobileNavLink>
             <MobileNavLink href="/about">About</MobileNavLink>
