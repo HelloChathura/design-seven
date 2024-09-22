@@ -28,8 +28,9 @@ export default function NavBar() {
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <div className="flex space-x-4">
+            <NavLink href="/">Home</NavLink>
               <NavLink href="/about">About Us</NavLink>
-              <NavLink href="/services">Our Services</NavLink>
+              <NavLink href="/ourservices">Our Services</NavLink>
               <NavLink href="/contact">Contact</NavLink>
             </div>
           </div>
