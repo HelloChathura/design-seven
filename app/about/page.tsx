@@ -22,7 +22,7 @@ export default function about() {
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Leadership That Inspires</h1>
             <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-              Meet the visionaries driving our company's success and shaping the future of our industry.
+              Meet the visionaries driving our company&apos;s success and shaping the future of our industry.
             </p>
           </div>
         </div>
