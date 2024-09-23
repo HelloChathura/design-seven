@@ -1,31 +1,32 @@
 'use client';
 
-import Link from 'next/link'
-import { Facebook, Twitter, Youtube, Linkedin, Instagram } from 'lucide-react'
+import Link from 'next/link';
+import Image from 'next/image';
+import { Facebook, Twitter, Youtube, Linkedin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-600 py-12">
+    <footer className="bg-white text-black py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 bg-white p-6 rounded-lg shadow">
+          <div className="col-span-1">
             <Link href="/" className="flex items-center mb-4">
-              <span className="font-bold text-xl text-gray-800">Design Seven</span>
+              <Image src="/logo.png" alt="Design Seven Logo" width={150} height={50} />
             </Link>
             <p className="text-sm">
-              Established in 2020, Design Seven is a world class in Design & Architecturing Company.
+              Established in 2020, Design Seven is a world-class Design & Architecturing Company.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div>
             <h3 className="font-semibold text-gray-800 mb-4">Studio</h3>
             <ul className="space-y-2">
               <li><Link href="/about-us" className="hover:text-gray-800">About Us</Link></li>
               <li><Link href="/operating-model" className="hover:text-gray-800">Operating Model</Link></li>
               <li><Link href="/team" className="hover:text-gray-800">Team</Link></li>
-              <li><Link href="/designseven" className="hover:text-gray-800">Desing Seven Centre</Link></li>
+              <li><Link href="/designseven" className="hover:text-gray-800">Design Seven Centre</Link></li>
             </ul>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div>
             <h3 className="font-semibold text-gray-800 mb-4">Services</h3>
             <ul className="space-y-2">
               <li><Link href="/services/bim" className="hover:text-gray-800">BIM</Link></li>
@@ -35,7 +36,7 @@ export default function Footer() {
               <li><Link href="/services/engineering" className="hover:text-gray-800">Engineering</Link></li>
             </ul>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div>
             <h3 className="font-semibold text-gray-800 mb-4">Connect With Us</h3>
             <ul className="space-y-2">
               <li><Link href="/contact-us" className="hover:text-gray-800">Contact Us</Link></li>
@@ -72,5 +73,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
