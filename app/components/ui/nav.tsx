@@ -1,17 +1,17 @@
-"use client"
+'use client';
 
-import { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Menu, X } from 'lucide-react'
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 
 export default function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -34,10 +34,9 @@ export default function NavBar() {
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            {/* New MENU button */}
             <button className="flex items-center bg-white text-black border border-gray-300 px-4 py-2 rounded-md shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-              <Menu className="h-5 w-5 mr-2" aria-hidden="true" /> {/* Icon */}
-              <span className="font-medium text-base">Menu</span> {/* Text */}
+              <Menu className="h-5 w-5 mr-2" aria-hidden="true" />
+              <span className="font-medium text-base">Menu</span>
             </button>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
@@ -72,7 +71,7 @@ export default function NavBar() {
         </div>
       )}
     </nav>
-  )
+  );
 }
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -85,7 +84,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
         {children}
       </span>
     </Link>
-  )
+  );
 }
 
 function MobileNavLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -98,5 +97,5 @@ function MobileNavLink({ href, children }: { href: string; children: React.React
         {children}
       </span>
     </Link>
-  )
+  );
 }
