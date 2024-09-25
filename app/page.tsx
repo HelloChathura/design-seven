@@ -4,7 +4,6 @@ import ContactUs from "./components/contact-us";
 import About from "./components/about";
 import FlippingCard from "./components/flipping-cards"
 import AdvantagesCard from "./components/advantages"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "Design Seven - Home",
@@ -29,7 +28,6 @@ export default function Home() {
 <FlippingCard/>
 <AdvantagesCard />
 <ContactUs/>
-<SpeedInsights/>
    </>
   );
 }
