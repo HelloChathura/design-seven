@@ -14,7 +14,7 @@ export default function Footer() {
               <Image src="/logo.png" alt="Design Seven Logo" width={150} height={50} />
             </Link>
             <p className="text-sm">
-              Established in 2020, Design Seven is a world-class Design & Architecturing Company.
+              Established in 2022, Design Seven is a world-class Design & Architecturing Company.
             </p>
           </div>
           <div>
