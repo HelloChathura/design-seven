@@ -33,7 +33,7 @@ export default function about() {
   return (
     <div className="bg-gray-100 min-h-screen">
 
-      <div className="relative h-[400px] bg-cover bg-center" style={{ backgroundImage: "url('/management-meeting-room.jpg')" }}>
+      <div className="relative h-[600px] bg-cover bg-center" style={{ backgroundImage: "url('/management-meeting-room.jpg')" }}>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Leadership That Inspires</h1>
