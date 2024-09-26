@@ -1,5 +1,4 @@
 
-import Image from "next/image"
 import { Lightbulb, Target, Heart } from "lucide-react"
 
 //SEO
@@ -28,7 +27,7 @@ export const metadata = {
             <div className="text-center text-white px-6">
               <h1 className="text-3xl md:text-4xl mb-4">About Design Seven</h1>
               <p className="text-xl md:text-xl max-w-3xl mx-auto leading-relaxed">
-                Design Seven, established in 2022, serves as an extension of clients' studios, offering BIM
+                Design Seven, established in 2022, serves as an extension of clients&apos; studios, offering BIM
                 Consultancy &amp; Documentation Services for Architecture projects. With a strong focus on
                 industry-specific expertise, Design Seven efficiently manages projects requiring minimal client
                 involvement.
