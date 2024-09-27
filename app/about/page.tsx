@@ -1,6 +1,7 @@
 
 import Image from "next/image"
 
+
 //SEO
 export const metadata = {
     title: "Design Seven - About Us",
