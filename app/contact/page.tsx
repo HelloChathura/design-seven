@@ -1,5 +1,4 @@
-import { Lightbulb, Target, Heart } from "lucide-react";
-import { Card } from "../components/ui/card";
+
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic';
 
@@ -44,12 +43,6 @@ export default function About() {
 
         <div className="max-w-9xl mx-auto mt-2">
         <ContactUs showBackgroundImage={false} />
-          {/* <Card className="shadow-lg rounded-xl transition-all duration-500 hover:shadow-2xl">
-            <div className="p-8">
-              <h2 className="text-2xl mb-8 text-center">Contact Us</h2>
-              <ContactUs showBackgroundImage={false} />
-            </div>
-          </Card> */}
         </div>
 
       </div>
