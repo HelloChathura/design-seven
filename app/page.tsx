@@ -29,7 +29,7 @@ export default function Home() {
 <About/>
 <FlippingCard/>
 <AdvantagesCard />
-<ContactUs/>
+<ContactUs showBackgroundImage={true}/>
    </>
   );
 }
