@@ -7,7 +7,7 @@ import AdvantagesCard from "./components/advantages"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Design Seven - A World Leader in Design Documentation & BMI Services",
+  title: "Design Seven-A Leader in Design Documentation & BMI Services",
   keywords: [
     "Design Seven",
     "Design 7",
