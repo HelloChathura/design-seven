@@ -19,7 +19,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.designsevenstudio.com'),
-  title: "Design Seven - A World Leader in Design Documentation & BMI Services",
+  title: "Design Seven-A Leader in Design Documentation & BMI Services",
   description: "Design Seven has established itself as a BIM consultancy and Design Documentation Services for the Architectural, Interior Design industries.",
 };
 
