@@ -1,9 +1,10 @@
 
 import Image from "next/image"
+import type { Metadata } from 'next'
 
 
 //SEO
-export const metadata = {
+export const metadata: Metadata = {
     title: "Design Seven - About Us",
     keywords: [
       "Design Seven",
@@ -13,7 +14,7 @@ export const metadata = {
       "Interior Design",
       "BMI Consultancy",
     ],
-    author: "Design Seven",
+    authors: [{ name: "Design Seven" }],
     description:
       "Design Seven has established itself as a BIM consultancy and Design Documentation Services for the Architectural, Interior Design industries.",
   };  
