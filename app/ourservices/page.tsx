@@ -111,7 +111,7 @@ export default function About() {
         <div className="max-w-9xl mx-auto mt-2">
           <Card className="shadow-lg rounded-xl transition-all duration-500 hover:shadow-2xl">
             <div className="p-8">
-              <h2 className="text-2xl mb-8 text-center">States We Serve</h2>
+              <h2 className="text-2xl mb-8 text-center">STATES WE SERVE</h2>
               <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
                 {[
                   { name: "serve", src: "./states-we-serve.png" },
