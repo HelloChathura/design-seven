@@ -1,0 +1,10 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: googlebot-image
+Allow: /
+
+User-agent: googlebot-mobile
+Allow: /
+
+Sitemap: https://www.designsevenstudio.com/sitemap.xml
