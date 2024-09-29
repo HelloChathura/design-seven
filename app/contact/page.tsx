@@ -1,6 +1,7 @@
 
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic';
+import { toast } from 'react-toastify';
 
 const ContactUs = dynamic(() => import('../components/contact-us'), { ssr: false });
 
