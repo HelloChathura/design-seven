@@ -139,15 +139,15 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   );
 }
 
-function MobileNavLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-      className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-4 py-3 rounded-md text-lg font-medium"
-    >
-      <span className="font-montserrat text-[18px] font-normal capitalize">
-        {children}
-      </span>
-    </Link>
-  );
-}
+// function MobileNavLink({ href, children }: { href: string; children: React.ReactNode }) {
+//   return (
+//     <Link
+//       href={href}
+//       className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-4 py-3 rounded-md text-lg font-medium"
+//     >
+//       <span className="font-montserrat text-[18px] font-normal capitalize">
+//         {children}
+//       </span>
+//     </Link>
+//   );
+// }
