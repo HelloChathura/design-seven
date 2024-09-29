@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-      const result = await mailjetClient.post('send', { version: 'v3.1' }).request({
+      await mailjetClient.post('send', { version: 'v3.1' }).request({
         Messages: [
           {
             From: {
@@ -35,18 +35,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ],
       });
 
-      return res.status(200).json({ message: 'Email sent successfully', result });
+      return res.status(200).json({ message: 'Email sent successfully' });
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.error('Email sending error:', error.message);
         return res.status(500).json({ error: 'Failed to send email', details: error.message });
       } else {
         console.error('Email sending error:', error);
-        return res.status(500).json({ error: 'Failed to send email' });
+        return res.status(500).json({ error: 'Failed to send email', details: 'Unknown error' });
       }
     }
-  } else {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end(`Method ${req.method} not allowed`);
-  }
+}
 }

@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from 'react';
-import Button from "./ui/button";
-import Input from "./ui/input";
-import Textarea from "./ui/textarea";
+import Button from './ui/button';
+import Input from './ui/input';
+import Textarea from './ui/textarea';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { toast } from 'react-toastify';
 
 interface ContactUsProps {
   showBackgroundImage?: boolean;
@@ -19,17 +20,17 @@ export default function ContactUs({ showBackgroundImage = true }: ContactUsProps
 
   const validateForm = () => {
     const newErrors: { [key: string]: string } = {};
-    if (!name.trim()) newErrors.name = "Name is required";
-    if (!email.trim()) newErrors.email = "Email is required";
-    else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = "Email is invalid";
-    if (!message.trim()) newErrors.message = "Message is required";
+    if (!name.trim()) newErrors.name = 'Name is required';
+    if (!email.trim()) newErrors.email = 'Email is required';
+    else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = 'Email is invalid';
+    if (!message.trim()) newErrors.message = 'Message is required';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     if (validateForm()) {
       try {
         const response = await fetch('/api/sendEmail', {
@@ -39,22 +40,27 @@ export default function ContactUs({ showBackgroundImage = true }: ContactUsProps
           },
           body: JSON.stringify({ name, email, mobile, message }),
         });
-  
+
         const data = await response.json();
-  
-        if (data.success) {
-          console.log('Email sent successfully');
-          // You can show a success message or reset the form fields
-          setName('');
-          setEmail('');
-          setMobile('');
-          setMessage('');
-          setErrors({});
+        console.log(data);
+
+        if (data) {
+          toast.success('Thank you for contacting us! A member of our team will get back to you as soon as possible.', {
+            position: 'top-right',
+            autoClose: 15000,
+          });
         } else {
-          console.error('Failed to send email:', data.message);
+          toast.error('Failed to send email. Please try again later.', {
+            position: 'top-right',
+            autoClose: 3000,
+          });
         }
       } catch (error) {
         console.error('Error submitting form:', error);
+        toast.error('An error occurred. Please try again.', {
+          position: 'top-right',
+          autoClose: 3000,
+        });
       }
     }
   };
@@ -82,7 +88,7 @@ export default function ContactUs({ showBackgroundImage = true }: ContactUsProps
         backgroundPosition: 'center',
       }}
     >
-      {/* Conditionally render background overlay */}
+
       {showBackgroundImage && <div className="absolute inset-0 bg-black bg-opacity-60"></div>}
 
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col lg:flex-row bg-white rounded-lg overflow-hidden shadow-xl">
