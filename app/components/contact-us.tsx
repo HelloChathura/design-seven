@@ -5,7 +5,7 @@ import Button from './ui/button';
 import Input from './ui/input';
 import Textarea from './ui/textarea';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-toastify';
 
 interface ContactUsProps {
@@ -66,15 +66,6 @@ export default function ContactUs({ showBackgroundImage = true }: ContactUsProps
     }
   };
 
-  const mapContainerStyle = {
-    width: '100%',
-    height: '100%',
-  };
-
-  const center = {
-    lat: 40.7128, // Replace with your desired location
-    lng: -74.0060,
-  };
 
   return (
     <section
