@@ -17,7 +17,7 @@ export default function LargeImageScroller() {
   }, [])
 
   const images = [
-    "/interior.jpg",
+    "/home_banner_1.jpg",
     // "/home_banner_1.svg?height=800&width=1200",
     // "/placeholder.svg?height=800&width=1200",
     // "/placeholder.svg?height=800&width=1200",
