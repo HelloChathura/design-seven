@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Button from './ui/button';
 import Input from './ui/input';
 import Textarea from './ui/textarea';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-toastify';
 
 interface ContactUsProps {
@@ -64,17 +65,7 @@ export default function ContactUs({ showBackgroundImage = true }: ContactUsProps
       }
     }
   };
-  
 
-  const mapContainerStyle = {
-    width: '100%',
-    height: '100%',
-  };
-
-  const center = {
-    lat: 40.7128, // Replace with your desired location
-    lng: -74.0060,
-  };
 
   return (
     <section
@@ -93,12 +84,31 @@ export default function ContactUs({ showBackgroundImage = true }: ContactUsProps
 
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col lg:flex-row bg-white rounded-lg overflow-hidden shadow-xl">
         <div className="w-full lg:w-1/2 h-64 lg:h-auto order-2 lg:order-1">
-          <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
-            <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={14}>
-              <Marker position={center} />
-            </GoogleMap>
-          </LoadScript>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.3132105800846!2d-94.21596432471813!3d36.35319159277076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c9100d30eaffb3%3A0x50926ec7fa726e0e!2s1713%20SW%20Commerce%20Dr%2C%20Bentonville%2C%20AR%2072712%2C%20USA!5e0!3m2!1sen!2slk!4v1727892229649!5m2!1sen!2slk" width="600" height="450"  loading="lazy"></iframe>
+
+          {/* Addresses Below the Map in One Line */}
+          <div className="flex justify-between p-4 space-x-8">
+            {/* Address 1 */}
+            <div className="flex items-start">
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="text-red-500 mr-3" size="lg" />
+              <div>
+                <p className="text-lg font-semibold">Head Office</p>
+                <p>1713 SW Commerce Dr,
+                Bentonville AR</p>
+              </div>
+            </div>
+            {/* Address 2 */}
+            <div className="flex items-start">
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="text-red-500 mr-3" size="lg" />
+              <div>
+                <p className="text-lg font-semibold">Branch Office</p>
+                <p>832 A Peradeniya Road,
+                Kandy, Sri Lanka</p>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div className="w-full lg:w-1/2 p-8 order-1 lg:order-2">
           <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
