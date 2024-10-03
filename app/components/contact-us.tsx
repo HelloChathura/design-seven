@@ -10,9 +10,10 @@ import { toast } from 'react-toastify';
 
 interface ContactUsProps {
   showBackgroundImage?: boolean;
+  showMap? :boolean;
 }
 
-export default function ContactUs({ showBackgroundImage = true }: ContactUsProps) {
+export default function ContactUs({ showBackgroundImage = true,showMap = true }: ContactUsProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
@@ -43,13 +44,21 @@ export default function ContactUs({ showBackgroundImage = true }: ContactUsProps
         });
 
         const data = await response.json();
-        console.log(data);
 
         if (data) {
           toast.success('Thank you for contacting us! A member of our team will get back to you as soon as possible.', {
             position: 'top-right',
             autoClose: 15000,
           });
+
+           // Clear the form
+        setName('');
+        setEmail('');
+        setMobile('');
+        setMessage('');
+
+        // Scroll to the top of the page
+        window.scrollTo(0, 0);
         } else {
           toast.error('Failed to send email. Please try again later.', {
             position: 'top-right',
@@ -84,8 +93,20 @@ export default function ContactUs({ showBackgroundImage = true }: ContactUsProps
 
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col lg:flex-row bg-white rounded-lg overflow-hidden shadow-xl">
         <div className="w-full lg:w-1/2 h-64 lg:h-auto order-2 lg:order-1">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.3132105800846!2d-94.21596432471813!3d36.35319159277076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c9100d30eaffb3%3A0x50926ec7fa726e0e!2s1713%20SW%20Commerce%20Dr%2C%20Bentonville%2C%20AR%2072712%2C%20USA!5e0!3m2!1sen!2slk!4v1727892229649!5m2!1sen!2slk" width="600" height="450"  loading="lazy"></iframe>
-
+        {showMap ? (
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.3132105800846!2d-94.21596432471813!3d36.35319159277076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c9100d30eaffb3%3A0x50926ec7fa726e0e!2s1713%20SW%20Commerce%20Dr%2C%20Bentonville%2C%20AR%2072712%2C%20USA!5e0!3m2!1sen!2slk!4v1727892229649!5m2!1sen!2slk"
+              width="600"
+              height="450"
+              loading="lazy"
+            ></iframe>
+          ) : (
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+              alt="Contact Background"
+              className="w-full  object-cover"
+            />
+          )}
           {/* Addresses Below the Map in One Line */}
           <div className="flex justify-between p-4 space-x-8">
             {/* Address 1 */}

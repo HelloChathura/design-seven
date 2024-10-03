@@ -20,11 +20,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           {
             From: {
               Email: 'info@designsevenstudio.com',
-              Name: 'Your Name',
+              Name: 'Contact Us Form',
             },
             To: [
               {
-                Email: 'designseven0707@gmail.com',
+                Email: 'info@designsevenstudio.com',
                 Name: 'Recipient Name',
               },
             ],
