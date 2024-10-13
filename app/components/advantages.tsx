@@ -7,19 +7,18 @@ import { Star, Shield, Rocket, Compass, Heart, Sun, Moon, Clock } from "lucide-r
 interface Advantage {
   title: string;
   description: string;
-  hoverText: string;
   icon: React.ComponentType<{ className?: string }>;
 }
 
 const advantages: Advantage[] = [
-  { title: "COST & TIME", description: "DESIGN SEVEN offers cost-effective services to clients along with the best value.", hoverText: "Clients effectively save 40-45% on cost as compared to in-house production.", icon: Clock },
-  { title: "EXPERIENCE", description: "Leadership and team have completed many small to large scale projects in many states", hoverText: "Leadership and team have completed many small to large scale projects in many states", icon: Star },
-  { title: "FLEXIBILITY", description: "Experienced team has the flexibility of ramping team up/down.", hoverText: "Experienced team has the flexibility of ramping team up/down based on project requirements.", icon: Shield },
-  { title: "BIM EXPERTISE", description: "Design Seven is a team is well experienced in BIM. Read More ...", hoverText: "Design Seven is a team is well experienced in BIM. The team has completed many projects across the States in Revit.", icon: Rocket },
-  { title: "STANDARDS", description: "DESIGN SEVEN team is able to produce sets in accordance with AIA and any required..", hoverText: "DESIGN SEVEN team is able to produce sets in accordance with AIA and any required client standards.", icon: Compass },
-  { title: "INFRASTRUCTURE", description: "The Organization is equipped with Data Integrity & Security, Global Connectivity..", hoverText: "The Organization is equipped with Data Integrity & Security, Global Connectivity, latest Hardware/Software, Cloud & Remote connectivity.", icon: Heart },
-  { title: "PROCESS EXCELLENCE", description: "DESIGN SEVEN delivers unmatched business value through process..", hoverText: "DESIGN SEVEN delivers unmatched business value through process excellence & quality frameworks.", icon: Sun },
-  { title: "REPEAT CLIENTELE", description: "DESIGN SEVEN focuses on surpassing client expectations and..", hoverText: "building long-term relationships. This is reflected in the fact that DESIGN SEVEN has a near-100% client retention rate with clients associated.", icon: Moon },
+  { title: "COST & TIME", description: "Design Seven provides cost-effective services to clients, delivering exceptional value. Clients can save 40-45% compared to in-house production costs.",  icon: Clock },
+  { title: "EXPERIENCE", description: "The leadership and team have successfully completed numerous small to large-scale projects across various States.",  icon: Star },
+  { title: "FLEXIBILITY", description: "Our experienced team has the flexibility to scale up or down in response to project requirements.",  icon: Shield },
+  { title: "BIM EXPERTISE", description: "Our team has extensive experience in BIM and has successfully completed numerous projects across the United States using Revit.", icon: Rocket },
+  { title: "STANDARDS", description: "Design Seven team is capable of producing documentation sets that comply with AIA standards as well as any specific requirements set by our clients.",  icon: Compass },
+  { title: "INFRASTRUCTURE", description: "The organization is equipped with robust data integrity and security measures, global connectivity, the latest hardware and software, as well as cloud and remote connectivity solutions.", icon: Heart },
+  { title: "PROCESS EXCELLENCE", description: "Design Seven delivers exceptional business value by leveraging process excellence and quality frameworks.", icon: Sun },
+  { title: "REPEAT CLIENTELE", description: "Design Seven is dedicated to exceeding client expectations and fostering long-term relationships. This commitment is evident in Design Seven’s nearly 100% client retention rate, with many clients having partnered with us for several years.",  icon: Moon },
 ];
 
 interface AdvantageCardProps {
@@ -40,7 +39,7 @@ const AdvantageCard: React.FC<AdvantageCardProps> = ({ advantage }) => {
         <CardContent className="p-10 h-full flex flex-col items-center justify-center text-center">
           <motion.div
             className={`relative flex flex-col items-center justify-center transition-opacity duration-300 ${
-              isHovered ? "opacity-0" : "opacity-100"
+              isHovered ? "opacity-100" : "opacity-100"
             }`}
             initial={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -54,13 +53,12 @@ const AdvantageCard: React.FC<AdvantageCardProps> = ({ advantage }) => {
           </motion.div>
           {isHovered && (
             <motion.div
-              className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75"
+              className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3 }}
             >
-              <p className="text-lg text-black-600 px-4">{advantage.hoverText}</p>
             </motion.div>
           )}
         </CardContent>
@@ -74,9 +72,9 @@ export default function Component() {
   const [isCursorVisible, setIsCursorVisible] = useState(true);
   const [index, setIndex] = useState(0);
   const completeText = "DESIGN SEVEN";
-  const typingSpeed = 100;
-  const blinkingSpeed = 500;
-  const pauseBeforeReset = 1000;
+  const typingSpeed = 600;
+  const blinkingSpeed = 1000;
+  const pauseBeforeReset = 2000;
 
   useEffect(() => {
     if (index < completeText.length) {
@@ -104,23 +102,23 @@ export default function Component() {
   return (
     <section className="bg-gray-100 py-16">
       <div className="mx-auto w-[80%] text-center">
-        <motion.h2
-          className="text-3xl mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {text}
-          {isCursorVisible && <span className="text-black-600">|</span>}
-          <span className="text-black-600"> Prime Advantage</span>
-        </motion.h2>
+      <motion.h2
+  className="text-3xl mb-12"
+  initial={{ opacity: 0, y: 100 }} 
+  animate={{ opacity: 1, y: 0 }}  
+  transition={{ duration: 1}}  
+>
+  {text}
+  {isCursorVisible && <span className="text-black-600">|</span>}
+  <span className="text-black-600"> Prime Advantage</span>
+</motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {advantages.map((advantage, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
+              transition={{ delay: index * 0.1, duration: 2.5 }}
             >
               <AdvantageCard advantage={advantage} />
             </motion.div>
