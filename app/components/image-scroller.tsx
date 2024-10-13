@@ -2,7 +2,6 @@
 
 import { useRef, useEffect, useState } from "react"
 import { motion, useAnimation, useMotionValue } from "framer-motion"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function LargeImageScroller() {
   const [width, setWidth] = useState(0)
@@ -27,13 +26,13 @@ export default function LargeImageScroller() {
     controls.start({ x: nearestMultiple, transition: { type: "spring", stiffness: 300, damping: 30 } })
   }
 
-  const handleNavigation = (direction: "left" | "right") => {
-    const currentX = x.get()
-    const newX = direction === "left" 
-      ? Math.min(currentX + carousel.current!.offsetWidth, 0)
-      : Math.max(currentX - carousel.current!.offsetWidth, -width)
-    controls.start({ x: newX, transition: { type: "spring", stiffness: 300, damping: 30 } })
-  }
+  // const handleNavigation = (direction: "left" | "right") => {
+  //   const currentX = x.get()
+  //   const newX = direction === "left" 
+  //     ? Math.min(currentX + carousel.current!.offsetWidth, 0)
+  //     : Math.max(currentX - carousel.current!.offsetWidth, -width)
+  //   controls.start({ x: newX, transition: { type: "spring", stiffness: 300, damping: 30 } })
+  // }
 
   return (
     <div className="relative w-full overflow-hidden bg-gray-900">

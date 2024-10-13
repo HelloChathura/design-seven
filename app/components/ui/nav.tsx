@@ -117,7 +117,7 @@ function NavLink({ href, children,className }: { href: string; children: React.R
   return (
     <Link
       href={href}
-      className="text-gray-600 hover:text-gray-900 px-4 py-3 rounded-md text-lg font-lg"
+      className="text-gray-600 hover:text-gray-900 px-4 py-3 rounded-md text-lg font-lg ${className}"
     >
       <span className="font-montserrat text-[22px] font-normal capitalize">
         {children}
