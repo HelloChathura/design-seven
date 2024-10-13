@@ -21,27 +21,27 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-800 mb-4">Studio</h3>
             <ul className="space-y-2">
               <li><Link href="/about" className="hover:text-gray-800">About Us</Link></li>
-              <li><Link href="#" className="hover:text-gray-800">Operating Model</Link></li>
+              {/* <li><Link href="#" className="hover:text-gray-800">Operating Model</Link></li>
               <li><Link href="#" className="hover:text-gray-800">Team</Link></li>
-              <li><Link href="#" className="hover:text-gray-800">Design Seven Centre</Link></li>
+              <li><Link href="#" className="hover:text-gray-800">Design Seven Centre</Link></li> */}
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-gray-800 mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link href="#" className="hover:text-gray-800">BIM</Link></li>
-              <li><Link href="#" className="hover:text-gray-800">Interior Design</Link></li>
+              <li><Link href="/ourservices" className="hover:text-gray-800">Our Services</Link></li>
+              {/* <li><Link href="#" className="hover:text-gray-800">Interior Design</Link></li>
               <li><Link href="#" className="hover:text-gray-800">Architecture</Link></li>
               <li><Link href="#" className="hover:text-gray-800">3D Visualization</Link></li>
-              <li><Link href="#" className="hover:text-gray-800">Engineering</Link></li>
+              <li><Link href="#" className="hover:text-gray-800">Engineering</Link></li> */}
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-gray-800 mb-4">Connect With Us</h3>
             <ul className="space-y-2">
-              <li><Link href="/contact" className="hover:text-gray-800">Contact Us</Link></li>
-              <li><Link href="#" className="hover:text-gray-800">Careers</Link></li>
-              <li><Link href="#" className="hover:text-gray-800">Blog</Link></li>
+              <li><Link href="/contact" className="hover:text-gray-800">Contact</Link></li>
+              {/* <li><Link href="#" className="hover:text-gray-800">Careers</Link></li>
+              <li><Link href="#" className="hover:text-gray-800">Blog</Link></li> */}
             </ul>
           </div>
         </div>
