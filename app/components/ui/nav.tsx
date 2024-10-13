@@ -113,11 +113,11 @@ export default function NavBar() {
   );
 }
 
-function NavLink({ href, children,className }: { href: string; children: React.ReactNode;className?: string  }) {
+function NavLink({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) {
   return (
     <Link
       href={href}
-      className="text-gray-600 hover:text-gray-900 px-4 py-3 rounded-md text-lg font-lg ${className}"
+      className={`text-gray-600 hover:text-gray-900 px-4 py-3 rounded-md text-lg font-lg ${className}`} // Apply className here
     >
       <span className="font-montserrat text-[22px] font-normal capitalize">
         {children}
@@ -125,6 +125,7 @@ function NavLink({ href, children,className }: { href: string; children: React.R
     </Link>
   );
 }
+
 
 // function MobileNavLink({ href, children }: { href: string; children: React.ReactNode }) {
 //   return (
