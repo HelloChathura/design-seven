@@ -35,7 +35,7 @@ export default function about() {
   return (
     <div className="bg-gray-100 min-h-screen">
 
-      <div className="relative h-[600px] bg-cover bg-center" style={{ backgroundImage: "url('/management-meeting-room.jpg')" }}>
+      {/* <div className="relative h-[600px] bg-cover bg-center" style={{ backgroundImage: "url('/management-meeting-room.jpg')" }}>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Leadership That Inspires</h1>
@@ -44,9 +44,9 @@ export default function about() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-24">
         <h2 className="text-4xl font-bold text-center mb-4">Our Management Team</h2>
         <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
           Meet the dedicated professionals leading our company towards innovation and success. Our management team brings together diverse expertise and a shared vision for the future.
