@@ -22,7 +22,7 @@ export default function About() {
     <div className="bg-gray-100 min-h-screen">
       <div
         className="relative h-[650px] bg-cover bg-center "
-        style={{ backgroundImage: "url('/structure-image.jpeg')" }}
+        style={{ backgroundImage: "url('/our_services.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white px-6">
