@@ -21,7 +21,7 @@ export default function About() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <div
-        className="relative h-[600px] bg-cover bg-center"
+        className="relative h-[650px] bg-cover bg-center "
         style={{ backgroundImage: "url('/structure-image.jpeg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -57,7 +57,7 @@ export default function About() {
               icon: <Heart className="w-8 h-8 text-red-500" />,
               title: "Core Values",
               description:
-                "DESIGN SEVEN’S core value is rooted in a commitment to quality and process optimization. This dedication has enabled us to maintain a leading position in design documentation, while our emphasis on innovation has established us as a &quot;Partner in Growth&quot; for our clients.",
+                "DESIGN SEVEN’S core value is rooted in a commitment to quality and process optimization. This dedication has enabled us to maintain a leading position in design documentation, while our emphasis on innovation has established us as a Partner in Growth for our clients.",
             },
           ].map((item) => (
             <div
@@ -79,7 +79,6 @@ export default function About() {
               <h2 className="text-2xl mb-8 text-center">TECHNICAL EXPERTISE</h2>
               <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
                 {[
-                  { name: "3DMax", src: "./3dmax.png" },
                   { name: "AutoCad", src: "./autocad.png" },
                   { name: "Lumion", src: "./lumion.png" },
                   { name: "Revit", src: "./revit.png" },
@@ -93,16 +92,12 @@ export default function About() {
                 ))}
               </div>
               <p className="text-center text-black max-w-7xl mx-auto">
-                Our company is renowned for its integrated software ecosystem
-                that offers comprehensive documentation and visualization
-                services. Our expertise extends across a range of cutting-edge
-                software platforms including AutoCAD, Revit, 3ds Max, SketchUp,
-                and Unreal Engine. Our team of seasoned professionals boasts
-                exceptional technical prowess in these software applications,
-                enabling us to harness their full potential for our clients. We
-                are committed to excellence, bringing intricate designs to life
-                and transforming concepts into immersive realities, all while
-                following international standards needed by clients.
+              Design Seven is a dynamic company, recognized for our integrated software ecosystem that provides comprehensive 
+              documentation and visualization services. Our expertise spans various platforms, including Revit, AutoCAD, and Lumion.
+               Our team of seasoned professionals possesses exceptional technical skills in these applications, 
+               allowing us to maximize their potential for our clients. With extensive experience and a commitment to excellence,
+                we bring intricate designs to life and transform concepts into immersive realities, 
+                all while adhering to international standards required by our clients.
               </p>
             </div>
           </Card>
@@ -111,7 +106,7 @@ export default function About() {
         <div className="max-w-9xl mx-auto mt-2">
           <Card className="shadow-lg rounded-xl transition-all duration-500 hover:shadow-2xl">
             <div className="p-8">
-              <h2 className="text-2xl mb-8 text-center">STATES WE SERVE</h2>
+              <h2 className="text-2xl mb-8 text-center">STATES WE CURRENTLY SERVE</h2>
               <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
                 {[
                   { name: "serve", src: "./states-we-serve.png" },
