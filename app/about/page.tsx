@@ -28,7 +28,7 @@ export default function about() {
   }
 
   const teamMembers = [
-    { name: "Saman Gamage", role: "Senior Studio Manager", image: "/default-image.png" },
+    { name: "Saman Gamage", role: "Senior Studio Manager", image: "/Saman.jpg" },
     { name: "Malith Gunawardhane", role: "Studio Manager", image: "/default-image.png" },
   ]
 
@@ -82,7 +82,7 @@ export default function about() {
                 alt={member.name}
                 width={400}
                 height={400}
-                className="w-full h-64 object-cover"
+                className="w-full h-96 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
