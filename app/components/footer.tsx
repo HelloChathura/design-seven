@@ -53,10 +53,10 @@ export default function Footer() {
               <Link href="#" className="ml-4 hover:text-gray-800">Terms & Condition</Link>
             </div>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-gray-600">
+              <Link href="https://x.com/design7studio" className="text-gray-400 hover:text-gray-600">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-gray-600">
+              <Link href="https://www.facebook.com/profile.php?id=100078031992042" className="text-gray-400 hover:text-gray-600">
                 <Facebook className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-gray-400 hover:text-gray-600">
@@ -65,7 +65,7 @@ export default function Footer() {
               <Link href="#" className="text-gray-400 hover:text-gray-600">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-gray-600">
+              <Link href="https://www.instagram.com/design_seven_?igsh=MWkxZ3MweGMxcHBrZQ%3D%3D&amp;utm_source=qr" className="text-gray-400 hover:text-gray-600">
                 <Instagram className="h-5 w-5" />
               </Link>
             </div>
