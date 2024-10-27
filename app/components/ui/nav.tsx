@@ -70,44 +70,55 @@ export default function NavBar() {
     </div>
   
     {isMenuOpen && (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50">
-        <div className="bg-white w-full max-w-md h-full overflow-y-auto shadow-lg">
-          <div className="p-6">
-            <div className="flex justify-end">
-              <button onClick={toggleMenu} className="text-gray-500 hover:text-gray-700">
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-            <h2 className="text-3xl font-bold mb-8">Quick Menu</h2>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-              {menuItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.link}
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  {item.title}
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="mt-8 grid grid-cols-3 gap-4 p-4">
-            {backgroundImages.map((image, index) => (
-              <div key={index} className="relative">
-                <img
-                  src={image.src}
-                  alt={image.title}
-                  className="w-full h-24 object-cover rounded-lg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-1 text-xs rounded-b-lg">
-                  {image.title}
-                </div>
-              </div>
-            ))}
-          </div>
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50">
+    <div className="bg-white w-full max-w-md h-full overflow-y-auto shadow-lg">
+      <div className="p-6">
+        <div className="flex justify-end">
+          <button onClick={toggleMenu} className="text-gray-500 hover:text-gray-700">
+            <X className="h-6 w-6" />
+          </button>
+        </div>
+        <h2 className="text-3xl font-bold mb-8">Quick Menu</h2>
+        <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+          {menuItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.link}
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+              onClick={toggleMenu} // Close menu on click
+            >
+              {item.title}
+            </Link>
+          ))}
         </div>
       </div>
-    )}
+      <div className="mt-8 grid grid-cols-3 gap-4 p-4">
+        {backgroundImages.map((image, index) => (
+          <Link
+            key={index}
+            href={image.url}
+            className="relative block"
+            onClick={toggleMenu} // Close menu on click
+          >
+            <Image
+              src={image.src}
+              alt={image.title}
+              width={300}
+              height={100}
+              className="w-full h-24 object-cover rounded-lg"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-1 text-xs rounded-b-lg">
+              {image.title}
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
+
+
   </nav>
   
   );
@@ -126,16 +137,3 @@ function NavLink({ href, children, className }: { href: string; children: React.
   );
 }
 
-
-// function MobileNavLink({ href, children }: { href: string; children: React.ReactNode }) {
-//   return (
-//     <Link
-//       href={href}
-//       className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-4 py-3 rounded-md text-lg font-medium"
-//     >
-//       <span className="font-montserrat text-[18px] font-normal capitalize">
-//         {children}
-//       </span>
-//     </Link>
-//   );
-// }
