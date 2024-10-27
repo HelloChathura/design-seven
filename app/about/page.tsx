@@ -22,7 +22,7 @@ export default function about() {
 
   const ceo = {
     name: "Shan Rajapakse, Associate AIA",
-    role: "Program Director",
+    role: "Director",
     image: "/team/team-shan.png",
     bio: "Shan earned his Master’s degree in Architecture from North Dakota State University and began his career at one of the premier residential architecture firms in the region. His diverse experience spans multiple firms, where he has been involved in projects from initiation to completion, significantly deepening his knowledge of the profession. Over the years, Shan has gained hands-on experience across various sectors, including commercial, corporate, healthcare, industrial, government, and high-end residential architecture. His work at well-known firms across the United States has allowed him to develop a versatile skill set and a comprehensive understanding of the industry. "
   }
@@ -73,7 +73,7 @@ export default function about() {
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-center mb-8">Leadership Team</h2>
+        <h2 className="text-3xl font-bold text-center mb-8"></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">

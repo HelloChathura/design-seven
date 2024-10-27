@@ -113,18 +113,22 @@ export default function ContactUs({ showBackgroundImage = true,showMap = true }:
             <div className="flex items-start">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="text-red-500 mr-3" size="lg" />
               <div>
-                <p className="text-lg font-semibold">Head Office</p>
+                <p className="text-lg font-semibold">NWA Office</p>
                 <p>1713 SW Commerce Dr,
-                Bentonville AR</p>
+                Bentonville AR</p><br></br>
+                <p>info@designsevenstudio.com</p>
+                <p>479-412-3061</p>
               </div>
             </div>
             {/* Address 2 */}
             <div className="flex items-start">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="text-red-500 mr-3" size="lg" />
               <div>
-                <p className="text-lg font-semibold">Branch Office</p>
+                <p className="text-lg font-semibold">Kandy Office</p>
                 <p>832 A Peradeniya Road,
-                Kandy, Sri Lanka</p>
+                Kandy, Sri Lanka.</p><br></br>
+                <p>info@designsevenstudio.com</p>
+                <p>+94 767237841</p>
               </div>
             </div>
           </div>
