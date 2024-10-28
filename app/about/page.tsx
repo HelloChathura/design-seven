@@ -17,8 +17,16 @@ export const metadata: Metadata = {
       "Design Seven has established itself as a BIM consultancy and Design Documentation Services for the Architectural, Interior Design industries.",
 };
 
+// Define types for the TeamMember props
+interface TeamMemberProps {
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+}
+
 // Component to display each team member
-const TeamMember = ({ name, role, image, bio }) => (
+const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, bio }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
     <div className="md:flex">
       <div className="md:flex-shrink-0">
