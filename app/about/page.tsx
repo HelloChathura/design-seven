@@ -60,13 +60,13 @@ export default function About() {
       name: "Saman Gamage",
       role: "Senior Studio Manager",
       image: "/Saman.jpg",
-      bio: "",
+      bio: " ",
     },
     {
       name: "Malith Gunawardhane",
       role: "Studio Manager",
       image: "/default-image.png",
-      bio: "",
+      bio: " ",
     },
   ];
 
