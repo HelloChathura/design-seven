@@ -60,13 +60,13 @@ export default function About() {
       name: "Saman Gamage",
       role: "Senior Studio Manager",
       image: "/Saman.jpg",
-      bio: "Saman has over a decade of experience in managing design studios and coordinating complex projects. He brings a wealth of expertise in team leadership and project execution, making him an invaluable asset to our company.",
+      bio: "",
     },
     {
       name: "Malith Gunawardhane",
       role: "Studio Manager",
       image: "/default-image.png",
-      bio: "Malith is a skilled architect with a strong background in digital tools and BIM management. His focus on innovative solutions ensures that our projects are both creative and technically sound.",
+      bio: "",
     },
   ];
 
