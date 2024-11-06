@@ -11,10 +11,15 @@ export const metadata: Metadata = {
     "Design Seven",
     "Design 7",
     "Design",
+    "Studio",
+    "Design Seven Studio",
     "Architecturing",
     "Interior Design",
     "BMI Consultancy",
     "BMI Services",
+    "Bentonville",
+    "United States",
+    "Canada"
   ],
   authors: [{ name: "Design Seven" }],
   description:
