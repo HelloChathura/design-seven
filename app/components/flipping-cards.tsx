@@ -48,7 +48,7 @@ export default function Component() {
       content: {
         imageSrc: "./corporate_commercials_front.jpg",
         imageText: "Web Dev Front",
-        title: "CORPORATE / COMMERCIALS",
+        title: "CORPORATE / COMMERCIAL",
         isSvg: true,
       },
     },
