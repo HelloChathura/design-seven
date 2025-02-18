@@ -48,7 +48,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm mb-4 md:mb-0">
-              © Design Seven Ltd. 2025
+              © Design Seven. 2025
               <Link href="#" className="ml-4 hover:text-gray-800">Privacy Policy</Link>
               <Link href="#" className="ml-4 hover:text-gray-800">Terms & Condition</Link>
             </div>
