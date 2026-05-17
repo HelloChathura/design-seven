@@ -58,12 +58,10 @@ export default function LargeImageScroller() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center px-4">
             <h2 className="text-black text-4xl">
-              A Leader in Architectural Documentation
+              Trusted Architectural Documentation Service
             </h2>
             <p className="text-black text-lg mt-2 max-w-2xl">
-              Design Seven has successfully completed architectural projects of
-              various scales, from small to large, utilizing BIM and CAD, all
-              produced in accordance with client-required standards.
+              Design Seven provides architectural drafting and documentation services for projects of all sizes, utilizing BIM and CAD workflows to deliver accurate drawings and documentation in line with client standards and project requirements.
             </p>
           </div>
         </motion.div>
