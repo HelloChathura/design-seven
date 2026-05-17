@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     "BMI Services",
     "Bentonville",
     "United States",
-    "Canada"
+    "Canada",
+    "USA"
     ],
     authors: [{ name: "Design Seven" }],
     description:
