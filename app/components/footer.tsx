@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { Facebook, Twitter, Youtube, Linkedin, Instagram} from 'lucide-react';
 
 export default function Footer() {
@@ -12,7 +11,7 @@ export default function Footer() {
           <div className="col-span-1">
           
             {/* <Link href="/" className="flex items-center mb-4">
-              <Image src="/logo.png" alt="Design Seven Logo" width={150} height={50} />
+              <img src="/logo.png" alt="Design Seven Logo" width={150} height={50} />
             </Link> */}
             {/* <p className="text-sm">
               Established in 2022, Design Seven is a design documentation & BMI Consultancy.

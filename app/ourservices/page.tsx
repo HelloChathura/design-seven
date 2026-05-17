@@ -1,4 +1,3 @@
-import { Lightbulb, Target, Heart } from "lucide-react";
 import { Card } from "../components/ui/card";
 
 //SEO
