@@ -57,7 +57,7 @@ export default function Footer() {
               <Link href="#" className="text-gray-400 hover:text-gray-600">
                 <Youtube className="h-5 w-5" />
               </Link>
-              <Link href="htps://www.linkedin.com/company/112439719/admin/dashboard/" className="text-gray-400 hover:text-gray-600">
+              <Link href="https://www.linkedin.com/company/112439719/admin/dashboard/" className="text-gray-400 hover:text-gray-600">
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link href="https://www.instagram.com/design_seven_?igsh=MWkxZ3MweGMxcHBrZQ%3D%3D&amp;utm_source=qr" className="text-gray-400 hover:text-gray-600">
