@@ -6,10 +6,8 @@ export default function AboutSection() {
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8 bg-black bg-opacity-50">
         <h2 className="text-4xl mb-6">About Design Seven</h2>
         <p className="text-2xl text-center max-w-6xl">
-          Design Seven has established itself as a BIM consultancy and Design Documentation Services for the Architectural,
-          Interior Design industries. Our designers are trained in design standards and construction technology.
-          The team has been working for many clients throughout the US on small to large-scale projects.
-        </p>
+          Design Seven is a BIM consultancy and design documentation service provider for the Architecture and Interior Design industries. Our team is trained in industry design standards and construction technology, delivering drafting and documentation support for clients across the United States on projects ranging from small-scale developments to large projects.
+           </p>
       </div>
     </section>
   );

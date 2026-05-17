@@ -34,18 +34,14 @@ export default function About() {
           <div className="text-center text-white px-6">
             <h1 className="text-3xl md:text-4xl mb-4">About Design Seven</h1>
             <p className="text-xl md:text-xl max-w-3xl mx-auto leading-relaxed">
-              Design Seven, established in 2022, serves as an extension of
-              clients&apos; studios, offering BIM Consultancy &amp; Documentation
-              Services for Architecture projects. With a strong focus on
-              industry-specific expertise, Design Seven efficiently manages
-              projects requiring minimal client involvement.
+              Design Seven works as an external drafting and documentation partner for architectural firms, providing BIM consultancy and design documentation services across a wide range of projects. Our experienced team follows industry standards and streamlined workflows to deliver high-quality documentation while reducing the coordination effort required from clients.
             </p>
           </div>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
               icon: <Lightbulb className="w-8 h-8 text-blue-500" />,
@@ -77,12 +73,12 @@ export default function About() {
               <p className="text-gray-600">{item.description}</p>
             </div>
           ))}
-        </div>
+        </div>  */}
 
         <div className="max-w-9xl mx-auto mt-2">
           <Card className="shadow-lg rounded-xl transition-all duration-500 hover:shadow-2xl">
             <div className="p-8">
-              <h2 className="text-2xl mb-8 text-center">TECHNICAL EXPERTISE</h2>
+              {/* <h2 className="text-2xl mb-8 text-center">TECHNICAL EXPERTISE</h2> */}
               <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
                 {[
                   { name: "AutoCad", src: "./autocad.png" },
@@ -98,12 +94,14 @@ export default function About() {
                 ))}
               </div>
               <p className="text-center text-black max-w-7xl mx-auto">
-              Design Seven is a dynamic company, recognized for our integrated software ecosystem that provides comprehensive 
+              {/* Design Seven is a dynamic company, recognized for our integrated software ecosystem that provides comprehensive 
               documentation and visualization services. Our expertise spans various platforms, including Revit, AutoCAD, and Lumion.
                Our team of seasoned professionals possesses exceptional technical skills in these applications, 
                allowing us to maximize their potential for our clients. With extensive experience and a commitment to excellence,
                 we bring intricate designs to life and transform concepts into immersive realities, 
-                all while adhering to international standards required by our clients.
+                all while adhering to international standards required by our clients. */}
+                Design Seven is a forward-thinking firm specializing in integrated digital workflows for architectural documentation and visualization. We operate across leading platforms such as Revit, AutoCAD, and Lumion, leveraging their capabilities to deliver precise and visually compelling outputs.<br></br><br></br>
+Our skilled team brings strong technical expertise across these tools, enabling efficient production of high-quality design documentation tailored to client needs. With a focus on international standards and detail-driven execution, we help translate architectural concepts into clear, accurate, and immersive visual representations.
               </p>
             </div>
           </Card>
