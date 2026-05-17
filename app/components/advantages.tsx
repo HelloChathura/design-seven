@@ -1,39 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Component() {
-  const [text, setText] = useState("");
-  const [isCursorVisible, setIsCursorVisible] = useState(true);
-  const [index, setIndex] = useState(0);
-  const completeText = "DESIGN SEVEN";
-  const typingSpeed = 600;
-  const blinkingSpeed = 1000;
-  const pauseBeforeReset = 2000;
-
-  useEffect(() => {
-    if (index < completeText.length) {
-      const timeout = setTimeout(() => {
-        setText((prev) => prev + completeText[index]);
-        setIndex((prev) => prev + 1);
-      }, typingSpeed);
-      return () => clearTimeout(timeout);
-    } else {
-      const resetTimeout = setTimeout(() => {
-        setText("");
-        setIndex(0);
-      }, pauseBeforeReset);
-      return () => clearTimeout(resetTimeout);
-    }
-  }, [index, completeText]);
-
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setIsCursorVisible((prev) => !prev);
-    }, blinkingSpeed);
-    return () => clearInterval(cursorInterval);
-  }, []);
-
   return (
     <section className="bg-gray-100 py-16">
       <div className="mx-auto w-[80%]">
